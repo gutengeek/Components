@@ -1,0 +1,31 @@
+.gutengeek-background-control{
+	> .components-base-control{
+		margin-bottom: 0px;
+	}
+	.components-base-control__field{
+		input{
+			max-width: 100%;
+		}
+
+		.components-base-control__label{
+			width: 100%;
+		}
+	}
+
+	.gutengeek-background-control-wrap{
+		.gutengeek-button-clear{
+			svg{
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+
+	> .gutengeek-device-tabs-wrap{
+		> .components-base-control__field {
+			> .components-base-control__field{
+				width: 100%;
+			}
+		}
+	}
+}

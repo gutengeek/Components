@@ -66,28 +66,51 @@ export default function MyComponent() {
 ## Gutengeek Toolbar Components Available:
 
 `ShapeControl`
+
 `SizeTypeUnits`
+
 `GradientControl`
+
 `IconPickerControl`
+
 `PaddingControl`
+
 `MarginControl`
+
 `HeadingControl`
+
 `RangeSlider`
+
 `BackgroundControl`
+
 `Typography`
+
 `AlignmentsControl`
+
 `BorderControl`
+
 `BorderRadiusControl`
+
 `BoxShadowControl`
+
 `TransformControl`
+
 `ButtonGroupControl`
+
 `Dimension`
+
 `ParallaxControls`
+
 `Color`
+
 `MediaControl`
+
 `TransitionControl`
+
 `ResponsiveControl`
+
 `InspectorTabs`
+
 `InspectorTab`
 
 ------
@@ -141,7 +164,7 @@ export default function MyComponent() {
 Support CSS Gradients to let show off a smooth color between at least 2 or more colors.
 
 ```jsx
-<Gradient value={ value } onChange={ ( value ) => setAttributes({value: value}) } presetAllowed={true}/>
+<GradientControl value={ value } onChange={ ( value ) => setAttributes({value: value}) } presetAllowed={true}/>
 ```
 
 ### IconPickerControl
@@ -173,7 +196,7 @@ const [ device, setDevice ] = useState( 'desktop' );
 <PaddingControl
 	value={ padding }
 	label={__( 'Padding' )}
-	onChange={ ( value ) => setAttributes({padding: value } )}
+	onChange={ ( value ) => setAttributes({ padding: value } )}
 	device={ device}
 	onChangeDevice={ (value) => setDevice(value) } units={ [ 'px', 'em', '%' ] }
 />
@@ -189,14 +212,18 @@ const [ device, setDevice ] = useState( 'desktop' );
 
 ```jsx
 <MarginControl
-	value={ padding }
-	label={__( 'Padding' )}
-	onChange={ ( value ) => setAttributes({padding: value } )}
+	value={ margin }
+	label={__( 'Margin' )}
+	onChange={ ( value ) => setAttributes({ margin: value } )}
 	device={ device}
 	onChangeDevice={ (value) => setDevice(value) } units={ [ 'px', 'em', '%' ] }
 />
+```
 
-### Heading: Allows to choose heading tag: h1, h2, h3, h4, h5, h6
+### HeadingControl
+
+Allows to choose heading tag: h1, h2, h3, h4, h5, h6
+
 ```jsx
 <HeadingControl
 	label={ __( 'Heading Tag' ) }
@@ -447,7 +474,7 @@ const [ unit, setUnit ] = useState( 'px' );
 {
 	( deviceMode ) => {
 		return (
-			// return your component
+			// return your children component
 		);
 	}
 }

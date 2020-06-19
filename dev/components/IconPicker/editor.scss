@@ -1,0 +1,95 @@
+.gutengeek-font-icon-picker > label{
+	display: block;
+}
+.gutengeek-icon-picker-search {
+	width: 100%;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-color: #0dcad2;
+    border-radius: 0 !important;
+	border-color: #e9edf1;
+
+	&:focus {
+		box-shadow: none !important;
+	}
+}
+
+.gutengeek-font-picker-inner {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	input[type=text] {
+		height: 30px;
+	}
+	.gutengeek-font-picker-advanced-dropdown {
+		.components-button,
+		.components-button.is-default,
+		.components-button.is-default:enabled {
+			height: 30px;
+			border: 1px solid #7e8993;
+    		border-right: 0;
+		    border-radius: 0;
+			margin-top: 0 !important;
+		}
+	}
+
+	.clear{
+		margin: 0 !important;
+	    height: 30px;
+    	border-radius: 0;
+	}
+
+	.gutengeek-icon-picker-area {
+		max-height: 180px;
+		display: flex;
+		flex-wrap: wrap;
+		overflow-y: scroll;
+		border: 1px solid #e9edf1;
+		border-top: 0 !important;
+
+		.gutengeek-icon-picker {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+			width: 16.66666667%;
+
+			svg {
+				height: 17px;
+				fill: #1e1e1e;
+			}
+
+			&:hover,
+			&.active {
+				span{
+					background-color: $primary;
+					border-color: $primary;
+					cursor: pointer;
+				}
+				svg {
+					fill: $white;
+				}
+			}
+
+			span{
+				border: 1px solid #E5E7EA;
+			    height: 37px;
+			    width: 100%;
+			    padding: 3px;
+			    text-align: center;
+			    transition: all 0.2s;
+			    font-size: 15px;
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+			    margin: 0;
+			    margin-left: -1px;
+			    margin-bottom: -1px;
+			}
+		}
+	}
+}

@@ -37,7 +37,7 @@ import GroupControls from './components/GroupControls';
 import LibsControl from './components/Libs';
 import DashSeparator from './components/DashSeparator';
 import ParallaxControls from './components/Parallax';
-
+console.log(AlignmentsControl)
 const AdvancedComponents = {
 	AlignmentsControl,
 	HeadingControl,
@@ -88,12 +88,14 @@ const AdvancedComponents = {
 		InsepectorPanel
 	}
 }
-
+console.log('asdasd')
 // add filter to extends wp.gutengeek.components
-wp.hooks.addFilter( 'gutengeek.components', 'gutengeek-advanced/components', (components) => {
-	return { ...components, ...AdvancedComponents }
-} );
+if ( wp && wp.hooks ) {
+	wp.hooks.addFilter( 'gutengeek.components', 'gutengeek-advanced/components', (components) => {
+		return { ...components, ...AdvancedComponents }
+	} );
+}
 
 wp.gutengeekInspectorComponents = AdvancedComponents;
 
-export default AdvancedComponents
+export default AdvancedComponents;

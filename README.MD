@@ -17,10 +17,17 @@ Make sure `autoload.php` had included
 require_once 'path/to/project/vendor/autoload.php';
 ```
 
-### Install the npm package
+### Or - Install the npm package
 ```bash
 cd path/to/your-folder
 npm i @gutengeek/components
+```
+
+### Requirement
+```php
+// make sure 'wp_enqueue_script' function enqueued with dependencies required
+// example
+wp_register_script( 'gutengeek-advanced-components', YOUR_PLUGIN_URL . 'path/to/blocks/scripts/index.js', [ 'wp-edit-post', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor', 'wp-api-fetch', 'wp-compose', 'wp-data' ], false, true );
 ```
 
 ## Usage
@@ -287,8 +294,7 @@ const [ device, setDevice ] = useState( 'desktop' );
 	allows={ [ 'color', 'gradient', 'image' ] }
 	device={ gutengeek_device_mode }
 	onChange={ value => setAttributes( { background: value } ) }
-	onChangeDevice={ ( device ) => setDevice( device )
-	}
+	onChangeDevice={ ( device ) => setDevice( device ) }
 />
 ```
 

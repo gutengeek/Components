@@ -1,8 +1,8 @@
 {
-  "name": "components",
+  "name": "gutengeek-components",
   "version": "1.0.0",
   "description": "Gutengeek Components Advanced Controls for GutenBerg",
-  "main": "webpack.config.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wp-scripts start",

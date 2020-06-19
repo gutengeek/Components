@@ -4,7 +4,7 @@ The package is a library that provides all components to create control power an
 
 ## Installation
 
-Install the plugin
+### Install the composer package
 
 ```bash
 cd path/to/your-[plugin|theme]
@@ -17,9 +17,31 @@ Make sure `autoload.php` had included
 require_once 'path/to/project/vendor/autoload.php';
 ```
 
+Make sure `autoload.php` had included
+```php
+// require autoload into your plugin or theme
+require_once 'path/to/project/vendor/autoload.php';
+```
+
+### Install the npm package
+```bash
+cd path/to/your-folder
+npm i @gutengeek/components
+```
+
 ## Usage
 
 Within [GutenGeek Plugin](https://gutengeek.com) plugin, these components can be accessed by importing from the `wp.gutengeek.components` root directory:
+
+```jsx
+// use with gtg-advanced-blocks wordpress plugin
+const {
+	BorderControl
+} = wp.gutengeek.components
+
+// import via npm
+import { BorderControl } from '@gutengeek/components';
+```
 
 ```jsx
 /**

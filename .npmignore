@@ -1,3 +1,5 @@
 dev
 package-lock.json
 webpack.config.js
+vendor
+*.php

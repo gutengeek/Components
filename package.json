@@ -1,5 +1,5 @@
 {
-  "name": "gutengeek-components",
+  "name": "@gutengeek/components",
   "version": "1.0.0",
   "description": "Gutengeek Components Advanced Controls for GutenBerg",
   "main": "build/index.js",

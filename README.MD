@@ -17,12 +17,6 @@ Make sure `autoload.php` had included
 require_once 'path/to/project/vendor/autoload.php';
 ```
 
-Make sure `autoload.php` had included
-```php
-// require autoload into your plugin or theme
-require_once 'path/to/project/vendor/autoload.php';
-```
-
 ### Install the npm package
 ```bash
 cd path/to/your-folder

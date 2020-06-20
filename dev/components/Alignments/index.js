@@ -6,10 +6,6 @@ const { __ } = wp.i18n;
 const { Component } = wp.element;
 const { ButtonGroup, Button, Tooltip } = wp.components;
 
-const {
-	Dashicon,
-} = wp.components;
-
 const Left = props => {
 	return (
 		<svg viewBox="0 0 28 28">

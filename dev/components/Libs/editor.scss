@@ -1,0 +1,61 @@
+.gutengeek-block-lib-item{
+    box-shadow: 0 1px 10px #dadde2;
+    border: none;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+
+    .card-image{
+    	position: relative;
+    	overflow: hidden;
+
+    	.components-spinner{
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin: 0;
+		    transform: translate(-50%, -50%);
+    	}
+    }
+
+    .card-footer{
+	    padding: 10px 10px;
+    }
+
+    &.processing{
+    	img{
+    		opacity: 0.7;
+    	}
+    }
+
+    &.disabled{
+    	opacity: 0.5;
+    }
+
+    img{
+    	transition: all .4s ease-in-out;
+    }
+
+    &:hover{
+    	cursor: pointer;
+
+    	img{
+    		transform: translateY(-4px) scale(1.2);
+    	}
+    }
+
+    .pro-feature{
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		display: block;
+		padding: 5px 12px;
+		font-size: 11px;
+		font-weight: 600;
+		color: $white;
+		line-height: 1;
+		border-radius: 2px;
+		background-color: #F44336;
+	}
+}

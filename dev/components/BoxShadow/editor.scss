@@ -1,0 +1,40 @@
+.gutengeek-device-tabs-wrap {
+	&.gutengeek-box-shadow-color-control {
+		display: flex;
+
+		.gutengeek-device-tabs {
+			margin-right: auto;
+			margin-left: 10px;
+		}
+
+	}
+}
+
+.gutengeek-box-shadow-control-wrap {
+	align-items: center;
+	align-content: space-between;
+	margin-bottom: 24px;
+
+	> div {
+		margin-bottom: 0 !important;
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+
+		.components-base-control__field {
+			margin-bottom: 0 !important;
+		}
+	}
+
+	.gutengeek-field-color {
+		width: auto;
+	}
+
+	.components-text-control__input {
+		&:focus {
+			border-color: $primary;
+			box-shadow: none;
+		}
+	}
+}

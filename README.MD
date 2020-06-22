@@ -41,7 +41,9 @@ const {
 } = wp.gutengeek.components
 
 // import via npm
-import { BorderControl } from '@gutengeek/components';
+import Components from "@gutengeek/components";
+import '@gutengeek/components/build/core.css';
+import '@gutengeek/components/build/index.css';
 ```
 
 ```jsx

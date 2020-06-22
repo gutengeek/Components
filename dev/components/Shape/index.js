@@ -1,3 +1,4 @@
+import shapes from './shapes';
 import Color from '../Color';
 import Responsive from '../Responsive';
 import Range from '../RangeSlider';
@@ -10,6 +11,11 @@ const { Component, Fragment } = wp.element;
 const { Dropdown, Tooltip, Dashicon, Button } = wp.components;
 
 class Shape extends Component {
+
+	constructor(props) {
+		super(props);
+		this.shapesOptions = wp.hooks.applyFilters( 'gutengeek_shapes_presets', shapes );
+	}
 
 	/**
 	 * save all value
@@ -27,7 +33,7 @@ class Shape extends Component {
 
 	renderShapeOptions() {
 		const { value } = this.props;
-		let shapes = Object.keys( wp.gutengeek.helper.getShapes() );
+		let shapes = Object.keys( this.shapesOptions );
 
 		return (
 			<ul className="gutengeek-shape-picker-options">
@@ -36,7 +42,7 @@ class Shape extends Component {
 					value.shape === item ? 'gutengeek-shape-selected' : '',
 				) }
 										  onClick={ () => this.saveValue( 'shape', item ) }
-										  dangerouslySetInnerHTML={ { __html: window.gutenGeekAdmin.getConfig(`shapes.${item}`) } }
+										  dangerouslySetInnerHTML={ { __html: this.shapesOptions[item] } }
 										  style={ value.shape == item ? { fill: value.color } : {} }/> ) }
 			</ul>
 		);
@@ -74,7 +80,7 @@ class Shape extends Component {
 									{
 										value.shape ?
 											<div className="gutengeek-field-shape-value"
-												 dangerouslySetInnerHTML={ { __html: window.gutenGeekAdmin.getConfig(`shapes.${value.shape}`) } }/>
+												 dangerouslySetInnerHTML={ { __html: this.shapesOptions[value.shape] } }/>
 											:
 											<div
 												className="gutengeek-fake-input gutengeek-flex gutengeek-align-center gutengeek-flex-wrap">
@@ -86,8 +92,7 @@ class Shape extends Component {
 						}
 						renderContent={ () => {
 							const { value } = this.props;
-							let shapes = Object.keys( window.gutenGeekAdmin.getConfig('shapes') );
-
+							let shapes = Object.keys( this.shapesOptions )
 							return (
 								<ul className="gutengeek-shape-picker-options">
 									{ shapes.map( item => <li className={ classnames(
@@ -95,7 +100,7 @@ class Shape extends Component {
 										value.shape === item ? 'gutengeek-shape-selected' : '',
 									) }
 															  onClick={ () => this.saveValue( 'shape', item ) }
-															  dangerouslySetInnerHTML={ { __html: window.gutenGeekAdmin.getConfig(`shapes.${item}`) } }
+															  dangerouslySetInnerHTML={ { __html: this.shapesOptions[item] } }
 															  style={ value.shape == item ? { fill: value.color } : {} }/> ) }
 								</ul>
 							);

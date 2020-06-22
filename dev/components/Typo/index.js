@@ -1,6 +1,7 @@
 const { Component, Fragment } = wp.element;
 const { __ } = wp.i18n;
 const { Dashicon, ToggleControl, Button, ButtonGroup, Dropdown, Tooltip, PanelRow, SelectControl } = wp.components;
+import fonts from './google-fonts.json';
 import './editor.scss';
 import RangeSlider from '../RangeSlider';
 import Select from '../Select';
@@ -14,6 +15,8 @@ class TypographyControl extends Component {
 
 	constructor( props ) {
 		super( props );
+
+		this.googleFonts = wp.hooks.applyFilters( 'gutengeek_google_fonts', fonts )
 
 		this.state = {
 			font_loaded: false,
@@ -77,10 +80,10 @@ class TypographyControl extends Component {
 	getFontFamiliesForSelection() {
 		// let defaults = [{ value: '', label: __( 'Default' ) }];
 		let defaults = { value: '', label: __( 'Default' ) };
-		let fonts = gutenGeekAdmin.getConfig( 'google_fonts' ).map((item) => {
+		let fonts = [...this.googleFonts].map((item) => {
 			return { value: item.family, label: item.family }
 		});
-		let customFonts = window.gutengeek_blocks_plugin.fonts;
+		let customFonts = window.gutengeek_blocks_plugin ? window.gutengeek_blocks_plugin.fonts : [];
 		// return [...defaults, ...fonts];
 		var options = [
 			defaults
@@ -121,7 +124,7 @@ class TypographyControl extends Component {
 		];
 		let fontFamily = typography !== undefined && typography.fontFamily ? typography.fontFamily : '';
 		if (fontFamily) {
-			var fontOptions = gutenGeekAdmin.getConfig( 'google_fonts' ).find((item) => item.family === fontFamily);
+			var fontOptions = [...this.googleFonts].find((item) => item.family === fontFamily);
 			if (fontOptions) {
 				data = [...fontOptions.variants];
 				if (fontOptions.variants !== undefined && fontOptions.variants.length > 0) {
@@ -129,7 +132,7 @@ class TypographyControl extends Component {
 						return { value: k, label: k };
 					} );
 				}
-			} else if (! fontOptions) {
+			} else if (! fontOptions && window.gutengeek_blocks_plugin) {
 				var selectedFont = window.gutengeek_blocks_plugin.fonts.find((font) => font.font_name == fontFamily );
 				data = selectedFont ? selectedFont.items.map((item) => {
 					return { value: item.font_item_weight, label: item.font_item_weight }

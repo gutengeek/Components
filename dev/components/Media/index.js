@@ -65,7 +65,7 @@ class Media extends Component {
 		const exts = ['wbm', 'jpg', 'jpeg', 'gif', 'png', 'svg'];
 		if (exts.indexOf( url.split( '.' ).pop().toLowerCase() ) !== -1) {
 			return url;
-		} else {
+		} else if ( window.gutenGeekAdmin ) {
 			// video thumbnail in this case
 			return window.gutenGeekAdmin.getConfig( 'url' ) + 'assets/images/no_image.jpg';
 		}
@@ -98,7 +98,8 @@ class Media extends Component {
 										value.map( ( v, index ) => {
 											return (
 												<div className="gutengeek-media-image-parent">
-													<img src={ this.getUrl( v.url ) } alt={ __( 'image' ) }/>
+													{this.getUrl( v.url ) ? <img src={ this.getUrl( v.url ) } alt={ __( 'image' ) }/> : <NoImage />}
+
 													{ action &&
 													<ButtonGroup
 														className="gutengeek-media-actions gutengeek-field-button-list">
@@ -131,7 +132,7 @@ class Media extends Component {
 									:
 									( ( value && value.url ) ?
 											<div className="gutengeek-media-image-parent">
-												<img src={ this.getUrl( value.url ) } alt={ __( 'image' ) }/>
+												{this.getUrl( value.url ) ? <img src={ this.getUrl( value.url ) } alt={ __( 'image' ) }/> : <NoImage />}
 												{ action &&
 												<ButtonGroup className="gutengeek-media-actions gutengeek-field-button-list gutengeek-no-border">
 													<Tooltip text={ __( 'Edit' ) }>

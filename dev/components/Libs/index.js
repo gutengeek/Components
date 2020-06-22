@@ -21,7 +21,7 @@ class Libs extends Component {
 		const { name, setItemData, getItem, gutengeek_dirty_status } = this.props;
 		const params = {
 			data: {
-				_nonce: window.gutenGeekAdmin.getConfig('ajax_nonce'),
+				_nonce: window.gutenGeekAdmin ? window.gutenGeekAdmin.getConfig('ajax_nonce') : '',
 				id: item.id
 			},
 		}

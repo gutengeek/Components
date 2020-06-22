@@ -1,0 +1,21 @@
+.gutengeek-field-shape-value{
+	&:hover {
+		cursor: pointer;
+	}
+
+	svg{
+		fill: $primary;
+	}
+}
+
+.gutengeek-shape-picker-option-item {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.gutengeek-shape-selected{
+	svg{
+		fill: $primary;
+	}
+}

@@ -1,0 +1,51 @@
+// Slick Carousel
+.gutengeek-slick-carousel-arrow-outside.gutengeek-slick-carousel .slick-next {
+	right: -45px;
+}
+
+[dir="rtl"] .gutengeek-slick-carousel-arrow-outside.gutengeek-slick-carousel .slick-next {
+	left: -45px;
+	right: auto;
+}
+
+.gutengeek-slick-carousel-arrow-inside.gutengeek-slick-carousel .slick-prev {
+	left: 25px;
+	z-index: 1;
+}
+
+[dir="rtl"] .gutengeek-slick-carousel-arrow-inside.gutengeek-slick-carousel .slick-prev {
+	left: auto;
+	right: 25px;
+}
+
+.gutengeek-slick-carousel-arrow-inside.gutengeek-slick-carousel .slick-next {
+	right: 25px;
+}
+
+[dir="rtl"] .gutengeek-slick-carousel-arrow-inside.gutengeek-slick-carousel .slick-next {
+	left: 25px;
+	right: auto;
+}
+
+@media (max-width: 976px) {
+
+	.gutengeek-slick-carousel-arrow-outside.gutengeek-slick-carousel .slick-prev {
+		left: 15px;
+		z-index: 1;
+	}
+
+	[dir="rtl"] .gutengeek-slick-carousel-arrow-outside.gutengeek-slick-carousel .slick-prev {
+		left: auto;
+		right: 15px;
+	}
+
+	.gutengeek-slick-carousel-arrow-outside.gutengeek-slick-carousel .slick-next {
+		right: 15px;
+	}
+
+	[dir="rtl"] .gutengeek-slick-carousel-arrow-outside.gutengeek-slick-carousel .slick-next {
+		left: 15px;
+		right: auto;
+	}
+
+}

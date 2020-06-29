@@ -1,4 +1,3 @@
-import shapes from './shapes';
 import Color from '../Color';
 import Responsive from '../Responsive';
 import Range from '../RangeSlider';
@@ -14,7 +13,7 @@ class Shape extends Component {
 
 	constructor(props) {
 		super(props);
-		this.shapesOptions = wp.hooks.applyFilters( 'gutengeek_shapes_presets', shapes );
+		this.shapesOptions = wp.hooks.applyFilters( 'gutengeek_shapes_presets', this.props.shapes ? this.props.shapes : (gutengeek_blocks_plugin.shapes ? gutengeek_blocks_plugin.shapes : {}) );
 	}
 
 	/**

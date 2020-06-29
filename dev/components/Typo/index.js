@@ -338,3 +338,7 @@ TypographyControl.defaultProps = {
 };
 
 export default TypographyControl;
+
+export {
+	fonts
+}

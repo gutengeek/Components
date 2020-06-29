@@ -1,4 +1,4 @@
-// import './editor.scss';
+import './editor.scss';
 import classnames from 'classnames';
 
 const { __ } = wp.i18n;
@@ -32,7 +32,7 @@ export const renderSVG = ( svg, options = {}, effect = '' ) => {
 			width: false,
 			height: false
 		}, options );
-		const Icons = window.c.fontawesome_icons || {};
+		const Icons = window.gutengeek_blocks_plugin.fontawesome_icons || {};
 
 		if ( ! svg ) {
 			return null;
@@ -224,7 +224,7 @@ const IconPicker = ( props ) => {
 						<button className="components-button gutengeek-button-field is-small clear" onClick={() => onChangeIcon( '' )}><Dashicon icon="dismiss" /></button>
 					</div>
 				</Fragment>}
-				{ !isCustomIcons() ? <Fragment>
+				{ ! isCustomIcons() ? <Fragment>
 						{ cloneIconList.length > 0 && <div className="gutengeek-icon-picker-area">
 							{ cloneIconList.splice( 0, 100 ).map( ( data, index ) => {
 								return (

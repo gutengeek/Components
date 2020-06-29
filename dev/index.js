@@ -7,7 +7,7 @@ import HeadingControl from './components/Heading';
 import PanelBodyTitleWrapper from './components/PanelBodyTitle';
 import SizeTypeUnit from './components/SizeTypeUnit';
 import Dimension from './components/Dimension';
-import Typography from './components/Typo';
+import Typography, { fonts as google_fonts } from './components/Typo';
 import Color from './components/Color';
 import DevicesControl from './components/Devices';
 import ResponsiveControl from './components/Responsive';
@@ -90,12 +90,19 @@ const AdvancedComponents = {
 }
 
 // add filter to extends wp.gutengeek.components
-if ( wp && wp.hooks ) {
-	wp.hooks.addFilter( 'gutengeek.components', 'gutengeek-advanced/components', (components) => {
-		return { ...components, ...AdvancedComponents }
-	} );
+if ( wp ) {
+	wp.gutengeekInspectorComponents = AdvancedComponents;
+	if ( wp.hooks ) {
+		wp.hooks.addFilter( 'gutengeek.components', 'gutengeek-advanced/components', (components) => {
+			return { ...components, ...AdvancedComponents }
+		} );
+
+		wp.hooks.addFilter( 'gutengeek.helper', 'gutengeek-advanced/helper', (helper) => {
+			return { ...helper, ...{ google_fonts } }
+		} );
+	}
 }
 
-wp.gutengeekInspectorComponents = AdvancedComponents;
-
 export default AdvancedComponents;
+
+export { google_fonts }

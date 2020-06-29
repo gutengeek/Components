@@ -1,0 +1,99 @@
+.gutengeek-field-border-type {
+	width: 15px;
+	display: block;
+	height: 0;
+}
+
+.gutengeek-field-border-type-solid {
+	border-top: 3px solid #8D96A0;
+}
+
+.gutengeek-field-border-type-dotted {
+	border-top: 3px dotted #8D96A0;
+}
+
+.gutengeek-field-border-type-dashed {
+	border-top: 3px dashed #8D96A0;
+}
+
+.gutengeek-field-border-type-double {
+	border-top: 3px double #8D96A0;
+}
+
+.gutengeek-button-field{
+	&.is-primary{
+		&:enabled{
+			span{
+				border-color: #228bf0;
+			}
+		}
+	}
+	&.none{
+		.is-default{
+			&:enabled{
+				svg{
+					fill: #d8e2ec;
+				}
+			}
+		}
+	}
+}
+
+.gutengeek-field-border-container {
+	> .gutengeek-field-border {
+
+		.gutengeek-range-field {
+			margin-bottom: 0;
+
+			.gutengeek-range-field-wrap-inner {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.gutengeek-size-type-field {
+		text-align: right;
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	.gutengeek-device-tabs {
+		margin-left: 8px;
+	}
+
+	.gutengeek-field-border-global {
+		.components-range-control {
+			width: 100%;
+		}
+	}
+
+	.gutengeek-field-border-advanced {
+		display: flex;
+		align-items: center;
+		align-content: space-between;
+		vertical-align: inherit;
+		margin-bottom: 10px;
+
+		.gutengeek-range-field {
+			margin-bottom: 0;
+		}
+
+		.components-range-control {
+			width: 100%;
+		}
+
+		.gutengeek-range-field-wrap-inner {
+			margin-bottom: 0;
+		}
+
+		.components-range-control,
+		.components-range-control .components-base-control__field {
+			margin-bottom: 0 !important;
+		}
+
+		label {
+			margin-right: 10px;
+			display: inline-block;
+		}
+	}
+}

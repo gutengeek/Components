@@ -207,6 +207,7 @@ Support CSS Gradients to let show off a smooth color between at least 2 or more 
 
 Support to show/display all icons from font awesome to let you choose icon for button, list bullets, social network icon in order to impress customers at the first sight.
 
+[![IconPickerControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/IconPicker.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 ```jsx
 const icons = {
 	500px: {
@@ -253,6 +254,7 @@ const icons = {
 
 Set space for around element's contents,. There are settings for padding ( top, right, bottom, left)
 
+[![PaddingControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/Padding.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 ```jsx
 const [ device, setDevice ] = useState( 'desktop' );
 ```
@@ -301,6 +303,8 @@ Allows to choose heading tag: h1, h2, h3, h4, h5, h6
 
 Drag and drop number, support on the different devices.
 
+[![RangeSlider](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/RangeSlider.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
+
 ```jsx
 const [ device, setDevice ] = useState( 'desktop' );
 ```
@@ -324,6 +328,8 @@ const [ device, setDevice ] = useState( 'desktop' );
 
 Choose Normal & Hover. Possible to set background: Color, Gradient, Video &  Images
 
+[![BackgroundControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/Background.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
+
 ```jsx
 const [ device, setDevice ] = useState( 'desktop' );
 ```
@@ -344,6 +350,8 @@ const [ device, setDevice ] = useState( 'desktop' );
 
 Font size, font family, variants, font style, font weight, text transform controls
 
+[![Typography](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/Typography.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
+
 ```jsx
 const [ device, setDevice ] = useState( 'desktop' );
 ```
@@ -361,6 +369,7 @@ const [ device, setDevice ] = useState( 'desktop' );
 ### AlignmentsControl
 
 Possible to set text-align in CSS with Align center, wide width, full width
+[![AlignmentsControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/HeadingControl.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 
 ```jsx
 <AlignmentsControl
@@ -382,6 +391,7 @@ Possible to set text-align in CSS with Align center, wide width, full width
 ### BorderControl
 
 Enable/disable border in css, set position, width (px, em, %), border shape.
+[![BorderControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/BorderControl.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 
 ```jsx
 <BorderControl
@@ -398,7 +408,7 @@ Enable/disable border in css, set position, width (px, em, %), border shape.
 ### BorderRadius
 
 Defines the radius in CSS of the element's corners
-
+[![BorderRadius](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/BorderRadius.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 ```jsx
 <BorderRadiusControl
 	className="your-extra-classs"
@@ -417,6 +427,7 @@ Defines the radius in CSS of the element's corners
 ### BoxShadowControl
 
 Choose box shadow in CSS
+[![BoxShadowControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/BoxShadow.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 
 ```jsx
 const [ device, setDevice ] = useState( 'desktop' );

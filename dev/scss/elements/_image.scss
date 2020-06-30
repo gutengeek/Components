@@ -1,0 +1,30 @@
+.gutengeek-image-placholder{
+	background: #f9f9f9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 150px;
+	max-height: 100%;
+	height: 100%;
+	width: 100%;
+
+	svg{
+		max-height: 50px;
+		fill: #ddd;
+		max-width: 40%;
+		width: 100%;
+	}
+}
+
+.gutengeek-image-mask {
+	mask-size: inherit;
+	mask-mode: alpha;
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+img{
+	&.gutengeek-image-mask{
+		mask-size: contain;
+	}
+}

@@ -1,0 +1,191 @@
+// .editor-styles-wrapper .block-editor-block-list__layout .gutengeek-button,
+.gutengeek-button {
+	display: inline-flex;
+	padding: 10px 15px;
+	color: $normal;
+	background-color: $white;
+	border: 1px solid $normal;
+	font-size: 16px;
+	border-radius: 5px;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: all 300ms ease-in-out;
+
+	* {
+		color: $normal;
+	}
+
+	&.gutengeek-button--primary,
+	&.gutengeek-button-primary{
+		background-color: $white;
+		border-color: $primary;
+		color: $primary;
+
+		* {
+			color: $primary;
+		}
+		&:hover{
+			border-color: $primary;
+			background: $primary;
+		}
+	}
+
+	&.gutengeek-button--secondary,
+	&.gutengeek-button-secondary{
+		background-color: $white;
+		border-color: $secondary;
+		color: $secondary;
+
+		* {
+			color: $secondary;
+		}
+		&:hover{
+			border-color: $secondary;
+			background: $secondary;
+		}
+	}
+
+	&.gutengeek-button--success,
+	&.gutengeek-button-success{
+		background-color: $white;
+		border-color: $success;
+		color: $success;
+
+		* {
+			color: $success;
+		}
+		&:hover{
+			border-color: $success;
+			background: $success;
+		}
+	}
+
+	&.gutengeek-button--info,
+	&.gutengeek-button-info{
+		background-color: $white;
+		border-color: $info;
+		color: $info;
+
+		* {
+			color: $info;
+		}
+		&:hover{
+			border-color: $info;
+			background: $info;
+		}
+	}
+
+	&.gutengeek-button--danger,
+	&.gutengeek-button-danger{
+		background-color: $white;
+		border-color: $danger;
+		color: $danger;
+
+		* {
+			color: $danger;
+		}
+		&:hover{
+			border-color: $danger;
+			background: $danger;
+		}
+	}
+
+	&.gutengeek-button-link,
+	&.gutengeek-button--link{
+		background: none;
+		box-shadow: none;
+		border: none;
+
+		&:hover,
+		&:focus{
+			color: unset;
+			border-color: transparent;
+			background: none;
+			text-decoration: underline;
+
+			* {
+				color: unset;
+			}
+		}
+	}
+
+	&:hover{
+		cursor: pointer;
+		color: $white;
+		border-color: $normal;
+		background: $normal;
+
+		*{
+			color: $white;
+		}
+	}
+
+	&.gutengeek-button--no-style {
+		padding: 0;
+		border: none;
+	}
+
+	&.gutengeek-button-size-small {
+		padding: 5px 10px;
+	}
+
+	&.gutengeek-button-size-medium {
+		padding: 8px 15px;
+	}
+
+	&.gutengeek-button-size-large {
+		padding: 15px 30px;
+	}
+
+	&.gutengeek-button-size-full,
+	&.gutengeek-button-width-full,
+	&.gutengeek-button--w-full {
+		width: 100%;
+	}
+
+	svg {
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		vertical-align: middle;
+		transition: fill 120ms ease-in-out;
+		fill: currentColor;
+	}
+
+	.gutengeek-button__icon-wrapper,
+	.gutengeek-button-icon {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-size: inherit;
+
+		&.gutengeek-icon-before {
+			margin-right: 10px;
+		}
+
+		&.gutengeek-icon-after {
+			margin-left: 10px;
+		}
+	}
+
+	&.icon-only-hover{
+		.gutengeek-button-icon{
+			visibility: hidden;
+			transition: all 0.2s ease-in;
+			&.gutengeek-icon-before{
+				transform: translateX(100%);
+			}
+			&.gutengeek-icon-after{
+				transform: translateX(-100%);
+			}
+		}
+
+		&:hover{
+			.gutengeek-button-icon{
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+	}
+}

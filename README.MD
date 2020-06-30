@@ -369,6 +369,7 @@ const [ device, setDevice ] = useState( 'desktop' );
 ### AlignmentsControl
 
 Possible to set text-align in CSS with Align center, wide width, full width
+
 [![AlignmentsControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/HeadingControl.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 
 ```jsx
@@ -391,6 +392,7 @@ Possible to set text-align in CSS with Align center, wide width, full width
 ### BorderControl
 
 Enable/disable border in css, set position, width (px, em, %), border shape.
+
 [![BorderControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/BorderControl.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 
 ```jsx
@@ -408,7 +410,9 @@ Enable/disable border in css, set position, width (px, em, %), border shape.
 ### BorderRadius
 
 Defines the radius in CSS of the element's corners
+
 [![BorderRadius](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/BorderRadius.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
+
 ```jsx
 <BorderRadiusControl
 	className="your-extra-classs"
@@ -427,6 +431,7 @@ Defines the radius in CSS of the element's corners
 ### BoxShadowControl
 
 Choose box shadow in CSS
+
 [![BoxShadowControl](https://s3.us-east-2.amazonaws.com/static.gutengeek.com/Thumbnails/BoxShadow.png)](https://wordpress.org/plugins/gtg-advanced-blocks/)
 
 ```jsx

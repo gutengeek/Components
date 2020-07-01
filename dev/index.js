@@ -93,7 +93,6 @@ const AdvancedComponents = {
 if ( wp ) {
 	wp.gutengeekInspectorComponents = AdvancedComponents;
 	if ( wp.hooks ) {
-		console.log(1)
 		wp.hooks.addFilter( 'gutengeek.components', 'gutengeek-advanced/components', (components) => {
 			return { ...components, ...AdvancedComponents }
 		} );

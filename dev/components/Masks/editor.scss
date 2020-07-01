@@ -1,0 +1,46 @@
+.gutengeek-mask-control{
+	> .gutengeek-toggle-control-field{
+		margin: 0 !important;
+		> .components-base-control__field{
+			> label{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.image-mask-selected{
+	width: 90%;
+	img{
+		display: block;
+		margin: 0 auto;
+		max-width: 100px;
+
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+.gutengeek-preset-mask-preview{
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	margin-bottom: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+
+	&:hover{
+		cursor: pointer;
+		border-color: #999;
+	}
+
+	img{
+		width: 80px;
+		height: 80px;
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0 auto;
+	}
+	span{
+		font-size: 13px;
+	}
+}

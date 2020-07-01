@@ -1,0 +1,7 @@
+dev
+src
+package-lock.json
+webpack.config.js
+vendor
+*.php
+**.map

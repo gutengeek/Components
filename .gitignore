@@ -1,0 +1,7 @@
+.DS_STORE
+package-lock.json
+*.map
+node_modules
+*.zip
+*.tar
+*.rar

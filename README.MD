@@ -1,6 +1,6 @@
 ```# Gutengeek - Components Reference```
 
-The package is a library that provides all components to create control power and UI beauty block inspector easily.
+The package is a library that provides all components to create control power and UI beauty block inspector easily. This is a part of GutenGeek plugin. [Check out Full Features Gutengeek Blocks](https://wordpress.org/plugins/gtg-advanced-blocks).
 
 ## Installation
 

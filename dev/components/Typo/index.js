@@ -212,7 +212,6 @@ class TypographyControl extends Component {
 							responsive={ true }
 							device={ device }
 							onChangeDevice={ ( device ) => onChangeDevice( device ) }
-							allowReset
 							onChange={ ( value ) => this.saveSettings( 'fontSize', value ) }
 							units={ [ 'px', 'em', 'rem' ] }
 							step={0.11}

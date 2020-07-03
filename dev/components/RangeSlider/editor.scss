@@ -1,8 +1,9 @@
 .gutengeek-range-field {
 	width: 100%;
-	> .components-base-control {
+	> .components-base-control,
+	.components-base-control__label {
 		display: flex;
-		margin-bottom: 10px !important;
+		margin-bottom: 0px !important;
 	}
 
 	&.responsive{
@@ -20,7 +21,7 @@
 .gutengeek-range-field-wrap-inner {
 	display: flex;
 	align-items: center;
-	margin-bottom: 8px;
+	margin-bottom: 0px;
 
 	&.disabled{
 		opacity: 0.75;
@@ -49,8 +50,8 @@
 	}
 	.components-range-control__number{
 		min-width: 55px !important;
-		background: #eaecf2;
-    	border: none !important;
+		background: $white;
+    	border: 1px solid #bec9d6;
     	text-align: center;
 
     	&:focus{
@@ -88,13 +89,13 @@
 		&::-webkit-slider-thumb {
 		  box-shadow: 0px 0px 0px $black;
 		  border: 1px solid #e4e8ef;
-		  height: 18px;
-		  width: 18px;
+		  height: 14px;
+		  width: 14px;
 		  border-radius: 25px;
 		  background: $primary;
 		  cursor: pointer;
 		  -webkit-appearance: none;
-		  margin-top: -7px;
+		  margin-top: -5px;
 		}
 		&:focus::-webkit-slider-runnable-track {
 		  background: #e4e8ef;
@@ -112,8 +113,8 @@
 		&::-moz-range-thumb {
 		  box-shadow: 0px 0px 0px $black;
 		  border: 1px solid #e4e8ef;
-		  height: 18px;
-		  width: 18px;
+		  height: 14px;
+		  width: 14px;
 		  border-radius: 25px;
 		  background: $primary;
 		  cursor: pointer;
@@ -143,8 +144,8 @@
 		  margin-top: 1px;
 		  box-shadow: 0px 0px 0px $black;
 		  border: 1px solid #e4e8ef;
-		  height: 18px;
-		  width: 18px;
+		  height: 14px;
+		  width: 14px;
 		  border-radius: 25px;
 		  background: #5491f1;
 		  cursor: pointer;

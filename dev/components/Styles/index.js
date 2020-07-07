@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import './editor.scss';
 
 const Styles = ( props ) => {
-	const { styles, value, className, onChange } = props;
+	const { styles, value, className, onChange, columns } = props;
 	const [styleSelect, setStyleSelect] = useState( value );
 
 	useLayoutEffect( () => {
@@ -16,6 +16,7 @@ const Styles = ( props ) => {
 		<Fragment>
 			<div className={ classnames(
 				'gutengeek-block-styles',
+				`col-${columns ? columns : 2}`,
 				className,
 			) }>
 				<div className={ classnames(

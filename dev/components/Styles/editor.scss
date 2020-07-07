@@ -1,4 +1,19 @@
 .gutengeek-block-styles {
+	&.col-3{
+		.gutengeek-style-button{
+			flex: 0 0 calc( 33.33% - 5px );
+		}
+	}
+	&.col-4{
+		.gutengeek-style-button{
+			flex: 0 0 calc( 25% - 5px );
+		}
+	}
+	&.col-5{
+		.gutengeek-style-button{
+			flex: 0 0 calc( 20% - 5px );
+		}
+	}
 	.gutengeek-style-button {
 		background: transparent;
 		width: calc(50% - 5px);

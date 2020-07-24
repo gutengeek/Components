@@ -1,0 +1,30 @@
+.gutengeek-tabs-controls{
+	margin: 0 -16px 15px -16px;
+    background: #f7f8fc;
+    border-bottom: 1px solid #e6e0e0;
+	.gutengeek-tabs{
+	    display: flex;
+	    justify-content: space-between;
+		margin-bottom: 15px;
+
+	    .gutengeek-tab{
+	    	width: 100%;
+	    	text-align: center;
+	    	padding: 10px;
+	    	border: 1px solid #e6e0e0;
+	    	cursor: pointer;
+	    	font-weight: 500;
+	    	line-height: 1;
+
+	    	&.active{
+    		    background: #d2e7ff78;
+			    color: $primary;
+			    border-color: #bed3ec;
+	    	}
+	    }
+	}
+
+    .gutengeek-tab-content{
+    	padding: 15px 16px;
+    }
+}

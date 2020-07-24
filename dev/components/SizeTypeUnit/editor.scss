@@ -45,6 +45,11 @@
 			margin-right: 3px;
 			align-items: center;
 			align-content: center;
+
+			&:hover,
+			&:focus{
+				background: transparent;
+			}
 		}
 
 		button.active-tab {

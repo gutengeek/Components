@@ -293,7 +293,7 @@ class Background extends Component {
 											'gutengeek-button-field',
 											value && value.source === source && ! value.none ? 'active' : '',
 										) } isSmall isPrimary={value && value.source === source && ! value.none }
-												onClick={ () => this.updateSetting( 'source', source ) }>
+												onClick={ () => this.updateSetting( 'source', source ) } key={source}>
 
 											{ source === 'color' && <Tooltip text={ __( 'Color' ) }>
 												{ ColorIcon }

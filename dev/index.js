@@ -37,6 +37,7 @@ import GroupControls from './components/GroupControls';
 import LibsControl from './components/Libs';
 import DashSeparator from './components/DashSeparator';
 import ParallaxControls from './components/Parallax';
+import Tabs, { Tab } from './components/Tabs';
 
 const AdvancedComponents = {
 	AlignmentsControl,
@@ -86,7 +87,10 @@ const AdvancedComponents = {
 	InlineModal: {
 		InspectorModal,
 		InsepectorPanel
-	}
+	},
+
+	Tabs,
+	Tab
 }
 
 // add filter to extends wp.gutengeek.components

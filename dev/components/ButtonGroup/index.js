@@ -1,5 +1,5 @@
 const { __ } = wp.i18n;
-const { Tooltip, Button, ButtonGroup } = wp.components;
+const { Tooltip, Button, ButtonGroup, Dashicon } = wp.components;
 import './editor.scss';
 import classnames from 'classnames';
 

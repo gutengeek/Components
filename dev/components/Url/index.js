@@ -34,7 +34,7 @@ const URL = props => {
 							</Tooltip>
 					</div>
 					{isToggle && (
-						<div className="gutengeek-url-advanced-options">
+						<div className="gutengeek-url-advanced-options gutengeek-mt-15">
 							<CheckboxControl
 								className="gutengeek-checked"
 								label={__( 'Open in new window' )}

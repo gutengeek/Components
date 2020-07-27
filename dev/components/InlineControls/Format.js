@@ -4,7 +4,7 @@ const { compose } = wp.compose;
 const { Component, Fragment } = wp.element
 const { toggleFormat, applyFormat, getActiveFormat, removeFormat, __experimentalRichText } = wp.richText;
 const { RichTextToolbarButton } = wp.blockEditor;
-const { registerFormatType } = wp.richText;
+const { registerFormatType, unregisterFormatType } = wp.richText;
 const { Toolbar, Button, Dashicon, Tooltip, Popover } = wp.components;
 const { createRef } = wp.element;
 import { InspectorModal, InsepectorPanel } from '../Modal';
@@ -170,6 +170,7 @@ registerFormatType( GUTENGEEK_RICH_TEXT_BOLD, {
 
 // Underline
 const GUTENGEEK_RICH_TEXT_UNDERLINE = 'gutengeek/rich-text-underline';
+unregisterFormatType( GUTENGEEK_RICH_TEXT_UNDERLINE );
 registerFormatType( GUTENGEEK_RICH_TEXT_UNDERLINE, {
     name: GUTENGEEK_RICH_TEXT_UNDERLINE,
     title: __( 'Underline' ),
@@ -199,6 +200,7 @@ registerFormatType( GUTENGEEK_RICH_TEXT_UNDERLINE, {
 
 // Italic
 const GUTENGEEK_RICH_TEXT_ITALIC = 'gutengeek/rich-text-italic';
+unregisterFormatType( GUTENGEEK_RICH_TEXT_ITALIC );
 registerFormatType( GUTENGEEK_RICH_TEXT_ITALIC, {
     name: GUTENGEEK_RICH_TEXT_ITALIC,
     title: __( 'Italic' ),
@@ -282,6 +284,8 @@ class InlineColor extends Component {
 
 }
 
+
+unregisterFormatType( GUTENGEEK_RICH_TEXT_COLOR );
 registerFormatType( GUTENGEEK_RICH_TEXT_COLOR, {
 	name: GUTENGEEK_RICH_TEXT_COLOR,
 	title: __( 'Color' ),
@@ -383,6 +387,7 @@ class InlineBackgroundColor extends Component {
 }
 // End Inline Background Color
 
+unregisterFormatType( GUTENGEEK_RICH_TEXT_BACKGROUND_COLOR );
 registerFormatType( GUTENGEEK_RICH_TEXT_BACKGROUND_COLOR, {
 	name: GUTENGEEK_RICH_TEXT_BACKGROUND_COLOR,
 	title: __( 'Background Color' ),
@@ -427,6 +432,7 @@ registerFormatType( GUTENGEEK_RICH_TEXT_BACKGROUND_COLOR, {
 
 // Remove Format
 const GUTENGEEK_RICH_TEXT_CLEAR_FORAMT = 'gutengeek/rich-text-remove-format';
+unregisterFormatType( GUTENGEEK_RICH_TEXT_CLEAR_FORAMT );
 registerFormatType( GUTENGEEK_RICH_TEXT_CLEAR_FORAMT, {
 	name: GUTENGEEK_RICH_TEXT_CLEAR_FORAMT,
 	title: __( 'Clear Format' ),

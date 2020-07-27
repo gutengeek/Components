@@ -1,17 +1,21 @@
 .gutengeek-block-styles {
+	margin: 0 -5px;
+	.gutengeek-style-button{
+		padding: 5px;
+	}
 	&.col-3{
 		.gutengeek-style-button{
-			flex: 0 0 calc( 33.33% - 5px );
+			flex: 0 0 33.33%;
 		}
 	}
 	&.col-4{
 		.gutengeek-style-button{
-			flex: 0 0 calc( 25% - 5px );
+			flex: 0 0 25%;
 		}
 	}
 	&.col-5{
 		.gutengeek-style-button{
-			flex: 0 0 calc( 20% - 5px );
+			flex: 0 0 20%;
 		}
 	}
 	.gutengeek-style-button {
@@ -19,8 +23,7 @@
 		width: calc(50% - 5px);
 		display: flex;
 		flex-direction: column;
-		padding: 0;
-		margin-bottom: 15px;
+		padding: 5px;
 		font-size: 12px;
 		border: none;
 		transition: all 0.3s;

@@ -1,12 +1,41 @@
 .gutengeek-inspector-tabs-container{
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 9999;
     background: #f2f4f5;
     margin-bottom: -1px;
 
     .tab-name{
     	text-transform: capitalize;
+    }
+
+    &.is-fixed{
+    	.gutengeek-inspector-tab{
+    		border-radius: 0;
+
+    		&:before,
+    		&:after{
+    			border-radius: 0;
+    			border-color: transparent;
+    		}
+
+    		&.active{
+    			border-radius: 0;
+    			&:after{
+    				background: $primary;
+    				height: 2px;
+    				bottom: -1px;
+    				top: auto;
+    			}
+
+    			&:before{
+    				border-color: transparent;
+    				border-radius: 0;
+    			}
+    		}
+
+    		border-bottom: 1px solid #b9bbbf;
+    	}
     }
 }
 .gutengeek-inspector-tabs{

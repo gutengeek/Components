@@ -580,3 +580,32 @@ Split tab layout, style, advanced
 	</InspectorTabs>
 </InspectorControls>
 ```
+
+### Tabs & Tab
+
+Split tab hover, active state
+
+```jsx
+<Tabs tabs={[ { name: 'normal', label: __( 'Normal' ) }, { name: 'hover', label: __( 'Hover' ) } ]} onChange={(value) => setState( { state: value } )}>
+	<Tab key="normal">
+		// do something
+	</Tab>
+	<Tab key="hover">
+		// do something
+	</Tab>
+</Tabs>
+```
+
+
+### URL
+
+URL full option
+
+```jsx
+// imageUrl: object
+<URL
+	label={ __( 'URL' ) }
+	value={imageUrl}
+	onChange={value => setAttributes({ imageUrl: value })}
+/>
+```

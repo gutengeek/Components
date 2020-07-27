@@ -16,15 +16,23 @@
 	    	font-weight: 500;
 	    	line-height: 1;
 
+	    	&:not(:last-child){
+	    		border-right: none;
+	    	}
+
 	    	&.active{
     		    background: #d2e7ff78;
 			    color: $primary;
 			    border-color: #bed3ec;
+
+			    &+div{
+			    	border-left-color: #bed3ec;
+			    }
 	    	}
 	    }
 	}
 
     .gutengeek-tab-content{
-    	padding: 15px 16px;
+    	padding: 0 16px;
     }
 }

@@ -78,7 +78,6 @@ class Libs extends Component {
 
 		return (
 			<Fragment>
-				<DashSeparator />
 				<PanelBody title={ __( 'Designs Library' ) } initialOpen={ true }>
 					<p>{ __( 'Use library with your content' ) }</p>
 					<div className="gutengeek-block-lib gutengeek-block-lib-items">
@@ -96,7 +95,6 @@ class Libs extends Component {
 						})}
 					</div>
 				</PanelBody>
-				<DashSeparator />
 			</Fragment>
 		)
 	}

@@ -38,6 +38,7 @@ import LibsControl from './components/Libs';
 import DashSeparator from './components/DashSeparator';
 import ParallaxControls from './components/Parallax';
 import Tabs, { Tab } from './components/Tabs';
+import URL from './components/Url';
 
 const AdvancedComponents = {
 	AlignmentsControl,
@@ -90,7 +91,8 @@ const AdvancedComponents = {
 	},
 
 	Tabs,
-	Tab
+	Tab,
+	URL
 }
 
 // add filter to extends wp.gutengeek.components

@@ -38,7 +38,8 @@ export default props => {
 	const {
 		tabs,
 		active,
-		children
+		children,
+		className
 	} = props;
 
 	var activeTab = active;
@@ -49,7 +50,7 @@ export default props => {
 	const [ currentTab, setTab ] = useState( activeTab );
 
 	return <Fragment>
-		<div className="gutengeek-tabs-controls">
+		<div className={ classnames('gutengeek-tabs-controls', className) }>
 			<div className="gutengeek-tabs">
 				{ tabs.length > 1 && tabs.map(tab => {
 					return (

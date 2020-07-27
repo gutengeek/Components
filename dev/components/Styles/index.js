@@ -21,7 +21,6 @@ const Styles = ( props ) => {
 			) }>
 				<div className={ classnames(
 					'gutengeek-flex',
-					'gutengeek-justify-between',
 					'gutengeek-flex-wrap',
 					className,
 				) }>

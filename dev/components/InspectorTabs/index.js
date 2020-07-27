@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import './editor.scss';
 const { __ } = wp.i18n;
-const { useState, useEffect, Fragment, Children, cloneElement } = wp.element;
+const { useState, useEffect, Fragment, Children, cloneElement, createRef } = wp.element;
 
 const { createHigherOrderComponent } = wp.compose;
 // slot - fill
@@ -69,16 +69,15 @@ export default props => {
 	}
 	const [ currentTab, setTab ] = useState( activeTab );
 
-	// check in view screen and toggle is-fixed class
-	const observer = new IntersectionObserver( ([e]) => {
-		e.target.classList.toggle('is-fixed', e.intersectionRatio < 1);
-	}, {threshold: [1]} );
 	useEffect( () => {
 		const tabContainer = document.querySelector('.gutengeek-inspector-tabs-container');
 		const tabs = document.querySelector('.gutengeek-inspector-tabs');
-		if (tabContainer) {
-        	observer.observe(tabContainer);
-		}
+
+		// check in view screen and toggle is-fixed class
+		const observer = new IntersectionObserver( ([e]) => {
+			e.target.classList.toggle('is-fixed', e.intersectionRatio < 1);
+		}, {threshold: [1]} );
+		observer.observe(tabContainer);
 	}, []);
 
 	return <Fragment>
